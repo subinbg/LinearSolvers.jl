@@ -17,9 +17,10 @@ A user is expected to define the following functions:
 - `LinearSolvers.fill!`
 - `LinearSolvers.rand!`
 - `LinearSolvers.copyto!`   
+- An `undef` intialization of your custom datatype: `T(undef, sz)` where `sz` is a size tuple from `LinearSolvers.size`
 
-`src/LinearSolvers.jl` includes examples of how to properly define those functions.  
-A user may also check `test/runtests.jl`.
+`src/LinearSolvers.jl` includes examples of how to properly define those functions.   
+A user may also check `test/runtests.jl` regarding the `undef` intialization.
 
 
 ## Copyright notice

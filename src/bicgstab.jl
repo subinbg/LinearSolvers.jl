@@ -75,7 +75,7 @@ function init_bicgstab(
     M = zeros(eltype(x), l+1, l+1)
 
     # Stopping condition based on absolute and relative tolerance.
-    tolerance = max(reltol * nrm, abstol)
+    tolerance = max(reltol * norm(b), abstol) # reltol * nrm
 
     BiCGStabIterable(A, l, x, r_shadow, rs, us,
         maxiter, niter, tolerance, nrm,
